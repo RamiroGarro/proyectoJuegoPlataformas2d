@@ -1,0 +1,58 @@
+; Engine configuration file.
+; It's best edited using the editor UI and not directly,
+; since the parameters that go here are not all obvious.
+;
+; Format:
+;   [section] ; section goes between []
+;   param=value ; assign values to parameters
+
+config_version=5
+
+[application]
+
+config/name="ProyectoJuegoPlataformas2D"
+config/description="Proyecto de Juego de Plataformas en 2D"
+config/features=PackedStringArray("4.2", "Mobile")
+run/max_fps=60
+config/icon="res://icon.svg"
+
+[autoload]
+
+Global="*res://Assets/Scripts/global.gd"
+
+[display]
+
+window/size/viewport_width=320
+window/size/viewport_height=180
+window/size/mode=4
+window/stretch/mode="viewport"
+
+[layer_names]
+
+2d_render/layer_1="Jugador"
+2d_render/layer_2="Enemigo"
+2d_render/layer_3="Entorno"
+2d_render/layer_4="Objeto"
+2d_render/layer_5="Trampa"
+2d_physics/layer_1="Jugador"
+2d_navigation/layer_1="Jugador"
+2d_physics/layer_2="Enemigo"
+2d_navigation/layer_2="Enemigo"
+2d_physics/layer_3="Entorno"
+2d_navigation/layer_3="Entorno"
+2d_physics/layer_4="Objeto"
+2d_navigation/layer_4="Objeto"
+2d_physics/layer_5="Trampa"
+2d_navigation/layer_5="Trampa"
+
+[rendering]
+
+textures/canvas_textures/default_texture_filter=0
+renderer/rendering_method="mobile"
+lights_and_shadows/directional_shadow/soft_shadow_filter_quality=0
+lights_and_shadows/positional_shadow/soft_shadow_filter_quality=0
+anti_aliasing/screen_space_roughness_limiter/enabled=false
+lights_and_shadows/positional_shadow/atlas_quadrant_0_subdiv=0
+lights_and_shadows/positional_shadow/atlas_quadrant_1_subdiv=0
+lights_and_shadows/positional_shadow/atlas_quadrant_2_subdiv=0
+lights_and_shadows/positional_shadow/atlas_quadrant_3_subdiv=0
