@@ -1,0 +1,11 @@
+[gd_scene load_steps=2 format=3 uid="uid://bmr1o1lu6l3xn"]
+
+[ext_resource type="Script" path="res://Assets/Scripts/camera.gd" id="1_4cbyp"]
+
+[node name="Camera" type="Camera2D"]
+offset = Vector2(0, -48)
+position_smoothing_enabled = true
+drag_vertical_enabled = true
+drag_top_margin = 1.0
+drag_bottom_margin = 0.0
+script = ExtResource("1_4cbyp")
