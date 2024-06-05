@@ -1,11 +1,71 @@
 ea4bc82a6ad023ab7ee23ee620429895
-::res://::1717018351
-icon.svg::CompressedTexture2D::8579093122043316320::1717018330::1717018336::1::::<><>::
-README.md::TextFile::-1::1717018269::0::1::::<><>::
-::res://Assets/::1717018377
-::res://Assets/Audio/::1717018367
-::res://Assets/Characters/::1717018360
-::res://Assets/Collectibles/::1717018377
-::res://Assets/Enviroment/::1717018364
-::res://Assets/Scripts/::1717018356
-::res://Scenes/::1717018351
+::res://::1717627901
+icon.svg::CompressedTexture2D::8579093122043316320::1717603107::1717603207::1::::<><>::
+README.md::TextFile::-1::1717603107::0::1::::<><>::
+::res://Assets/::1717603107
+::res://Assets/Audio/::1717628075
+a rellenar.txt::TextFile::-1::1717603107::0::1::::<><>::
+Death.mp3::AudioStreamMP3::8936524433400432382::1717628057::1717628080::1::::<><>::
+Hit.mp3::AudioStreamMP3::5640816253019766942::1717627500::1717627988::1::::<><>::
+Jump.mp3::AudioStreamMP3::5531728968873811413::1717628019::1717628080::1::::<><>::
+::res://Assets/Characters/::1717605725
+a rellenar.txt::TextFile::-1::1717603107::0::1::::<><>::
+::res://Assets/Characters/Player/::1717605761
+::res://Assets/Characters/Player/Attack/::1717605766
+Attack 0.png::CompressedTexture2D::3182099619239520040::1717598999::1717605766::1::::<><>::
+Attack 1.png::CompressedTexture2D::6210402094932353048::1717599024::1717605766::1::::<><>::
+Attack 2.png::CompressedTexture2D::8299688091242557307::1717599080::1717605766::1::::<><>::
+Attack 3.png::CompressedTexture2D::6229026969491141928::1717599090::1717605766::1::::<><>::
+::res://Assets/Characters/Player/Death/::1717605766
+Death 0.png::CompressedTexture2D::6560252706563370261::1717599488::1717605766::1::::<><>::
+Death 1.png::CompressedTexture2D::3498521004029711489::1717599499::1717605766::1::::<><>::
+Death 2.png::CompressedTexture2D::1500696740412191429::1717599508::1717605766::1::::<><>::
+Death 3.png::CompressedTexture2D::860291816656745767::1717599556::1717605766::1::::<><>::
+Death 4.png::CompressedTexture2D::7009992599483877399::1717599574::1717605766::1::::<><>::
+Death 5.png::CompressedTexture2D::8290346755275655930::1717599591::1717605766::1::::<><>::
+Death 6.png::CompressedTexture2D::7768548523413284517::1717599668::1717605766::1::::<><>::
+Death 7.png::CompressedTexture2D::1162046523155645200::1717599677::1717605766::1::::<><>::
+Death 8.png::CompressedTexture2D::580540160272953347::1717599688::1717605766::1::::<><>::
+Death 9.png::CompressedTexture2D::6688088100027847152::1717599742::1717605766::1::::<><>::
+::res://Assets/Characters/Player/Fall/::1717605766
+Fall 0.png::CompressedTexture2D::9159916561832950477::1717598906::1717605766::1::::<><>::
+Fall 1.png::CompressedTexture2D::5876098984094828665::1717598919::1717605766::1::::<><>::
+Fall 2.png::CompressedTexture2D::4892779495465538967::1717598973::1717605766::1::::<><>::
+::res://Assets/Characters/Player/Idle/::1717605766
+Idle 0.png::CompressedTexture2D::1278793606721039234::1717598078::1717605766::1::::<><>::
+Idle 1.png::CompressedTexture2D::8227402793807115122::1717598095::1717605766::1::::<><>::
+Idle 2.png::CompressedTexture2D::8426619793575206695::1717598110::1717605766::1::::<><>::
+Idle 3.png::CompressedTexture2D::3323091158754391364::1717598277::1717605765::1::::<><>::
+Idle 4.png::CompressedTexture2D::936280482238113398::1717598293::1717605765::1::::<><>::
+Idle 5.png::CompressedTexture2D::3057465453355905677::1717598320::1717605765::1::::<><>::
+Idle 6.png::CompressedTexture2D::6696237256675937849::1717598448::1717605765::1::::<><>::
+Idle 7.png::CompressedTexture2D::8382899030737464355::1717598461::1717605765::1::::<><>::
+Idle 8.png::CompressedTexture2D::1598186052293644020::1717598472::1717605765::1::::<><>::
+Idle 9.png::CompressedTexture2D::2914809129177513971::1717598534::1717605765::1::::<><>::
+::res://Assets/Characters/Player/Jump/::1717605765
+Jump 0.png::CompressedTexture2D::8863479453408686045::1717598664::1717605765::1::::<><>::
+Jump 1.png::CompressedTexture2D::3137677202706816698::1717598678::1717605765::1::::<><>::
+Jump 2.png::CompressedTexture2D::7090640041681420209::1717598864::1717605765::1::::<><>::
+::res://Assets/Characters/Player/Run/::1717605766
+Run 0.png::CompressedTexture2D::3135207521554444445::1717599152::1717605765::1::::<><>::
+Run 1.png::CompressedTexture2D::5050610686061324053::1717599200::1717605766::1::::<><>::
+Run 2.png::CompressedTexture2D::2297012767599001312::1717599212::1717605766::1::::<><>::
+Run 3.png::CompressedTexture2D::6696505558672528636::1717599221::1717605766::1::::<><>::
+Run 4.png::CompressedTexture2D::672178667861227385::1717599293::1717605766::1::::<><>::
+Run 5.png::CompressedTexture2D::8396905913582662942::1717599303::1717605766::1::::<><>::
+Run 6.png::CompressedTexture2D::4001231205309010552::1717599315::1717605766::1::::<><>::
+Run 7.png::CompressedTexture2D::723910970639372316::1717599380::1717605766::1::::<><>::
+Run 8.png::CompressedTexture2D::829807311834488452::1717599391::1717605766::1::::<><>::
+Run 9.png::CompressedTexture2D::1854884953015443122::1717599402::1717605766::1::::<><>::
+::res://Assets/Collectibles/::1717603107
+a rellenar.txt::TextFile::-1::1717603107::0::1::::<><>::
+::res://Assets/Enviroment/::1717603107
+a rellenar.txt::TextFile::-1::1717603107::0::1::::<><>::
+::res://Assets/GUI/::1717603107
+a rellenar.txt::TextFile::-1::1717603107::0::1::::<><>::
+::res://Assets/Scripts/::1717627886
+global.gd::GDScript::-1::1717603107::0::1::::<>Node<>::
+Player.gd::GDScript::-1::1717627886::0::1::::Player<>CharacterBody2D<>::
+::res://Scenes/::1717626642
+a rellenar.txt::TextFile::-1::1717603107::0::1::::<><>::
+Player.tscn::PackedScene::8095040972302904707::1717626642::0::1::::<><>::uid://blloylqr1cifo::::res://Assets/Characters/Player/Attack/Attack 0.png<>res://Assets/Scripts/Player.gd<>uid://cuqmod6fe416k::::res://Assets/Characters/Player/Attack/Attack 1.png<>uid://dqiowdx7cl0c2::::res://Assets/Characters/Player/Attack/Attack 2.png<>uid://cu0nftynf0wii::::res://Assets/Characters/Player/Attack/Attack 3.png<>uid://c0p3nyttqw1vt::::res://Assets/Characters/Player/Death/Death 0.png<>uid://bp3yeobrey8xp::::res://Assets/Characters/Player/Death/Death 1.png<>uid://vm7iyagi8vbh::::res://Assets/Characters/Player/Death/Death 2.png<>uid://miy465md08bj::::res://Assets/Characters/Player/Death/Death 3.png<>uid://c64xs3mc8pd7d::::res://Assets/Characters/Player/Death/Death 4.png<>uid://dqd52gukmqsbq::::res://Assets/Characters/Player/Death/Death 5.png<>uid://dixe4hhjerv6l::::res://Assets/Characters/Player/Death/Death 6.png<>uid://c2j03l7itg2iu::::res://Assets/Characters/Player/Death/Death 9.png<>uid://ijhn83m6htl0::::res://Assets/Characters/Player/Death/Death 8.png<>uid://qs50bl2amg45::::res://Assets/Characters/Player/Death/Death 7.png<>uid://d3reqtsohphaj::::res://Assets/Characters/Player/Fall/Fall 0.png<>uid://cpyoqyqdtnnrl::::res://Assets/Characters/Player/Fall/Fall 1.png<>uid://cbydmme5me6o6::::res://Assets/Characters/Player/Fall/Fall 2.png<>uid://shpsqyhg7r83::::res://Assets/Characters/Player/Idle/Idle 0.png<>uid://dphoefaeesk1g::::res://Assets/Characters/Player/Idle/Idle 1.png<>uid://dsb6gxthi0k52::::res://Assets/Characters/Player/Idle/Idle 2.png<>uid://bnly3cygqmgw7::::res://Assets/Characters/Player/Idle/Idle 3.png<>uid://nlsnxtxs2gu5::::res://Assets/Characters/Player/Idle/Idle 4.png<>uid://bjtcak1euyokb::::res://Assets/Characters/Player/Idle/Idle 5.png<>uid://c2nybw8dinx0d::::res://Assets/Characters/Player/Idle/Idle 6.png<>uid://w1f5j0l5gsdw::::res://Assets/Characters/Player/Idle/Idle 8.png<>uid://dro0efmclap44::::res://Assets/Characters/Player/Idle/Idle 7.png<>uid://bhr7qlprudafr::::res://Assets/Characters/Player/Idle/Idle 9.png<>uid://dyjshgv15nsrl::::res://Assets/Characters/Player/Jump/Jump 0.png<>uid://bkx6c5ndfmwas::::res://Assets/Characters/Player/Jump/Jump 1.png<>uid://c8a02ngudlxy4::::res://Assets/Characters/Player/Jump/Jump 2.png<>uid://bkwyn60t26hfp::::res://Assets/Characters/Player/Run/Run 0.png<>uid://cd7s25bb1kbjp::::res://Assets/Characters/Player/Run/Run 1.png<>uid://7yxp2f70m8qm::::res://Assets/Characters/Player/Run/Run 2.png<>uid://c2n3p6hlkab61::::res://Assets/Characters/Player/Run/Run 3.png<>uid://jtuxjh0myjwj::::res://Assets/Characters/Player/Run/Run 4.png<>uid://drvr2wrqfbwmw::::res://Assets/Characters/Player/Run/Run 5.png<>uid://bxahxtr8uoljk::::res://Assets/Characters/Player/Run/Run 6.png<>uid://l272m2f1sh0g::::res://Assets/Characters/Player/Run/Run 8.png<>uid://kkwycmfjh8i7::::res://Assets/Characters/Player/Run/Run 7.png<>uid://1orxi51pp3es::::res://Assets/Characters/Player/Run/Run 9.png

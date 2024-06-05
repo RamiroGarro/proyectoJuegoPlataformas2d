@@ -1,1 +1,2 @@
-res://Assets/Scripts/global.gd
+res://Scenes/Player.tscn
+res://Assets/Scripts/Player.gd
