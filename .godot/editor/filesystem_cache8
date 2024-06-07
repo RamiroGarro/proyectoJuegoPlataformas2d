@@ -1,11 +1,27 @@
 ea4bc82a6ad023ab7ee23ee620429895
-::res://::1717018351
-icon.svg::CompressedTexture2D::8579093122043316320::1717018330::1717018336::1::::<><>::
-README.md::TextFile::-1::1717018269::0::1::::<><>::
-::res://Assets/::1717018377
-::res://Assets/Audio/::1717018367
-::res://Assets/Characters/::1717018360
-::res://Assets/Collectibles/::1717018377
-::res://Assets/Enviroment/::1717018364
-::res://Assets/Scripts/::1717018356
-::res://Scenes/::1717018351
+::res://::1717715192
+icon.svg::CompressedTexture2D::8579093122043316320::1717624348::1717624431::1::::<><>::
+README.md::TextFile::-1::1717624348::0::1::::<><>::
+::res://Assets/::1717715192
+::res://Assets/Audio/::1717718601
+night_theme_1.wav::AudioStreamWAV::4497416326582910829::1717718546::1717718604::1::::<><>::
+::res://Assets/Characters/::1717624348
+a rellenar.txt::TextFile::-1::1717624348::0::1::::<><>::
+::res://Assets/Collectibles/::1717624348
+a rellenar.txt::TextFile::-1::1717624348::0::1::::<><>::
+::res://Assets/Enviroment/::1717628488
+::res://Assets/Enviroment/Level1/::1717715154
+::res://Assets/Enviroment/Level1/Background/::1717628527
+layer_1.png::CompressedTexture2D::7345253939696264270::1528881352::1717628527::1::::<><>::
+layer_2.png::CompressedTexture2D::124466965602576219::1528881550::1717628527::1::::<><>::
+layer_3.png::CompressedTexture2D::4653485759025735968::1528881577::1717628527::1::::<><>::
+::res://Assets/Enviroment/Level1/Foreground/::1717715192
+demcastle2d.png::CompressedTexture2D::8889764764940063239::1717715093::1717715165::1::::<><>::
+::res://Assets/GUI/::1717624348
+a rellenar.txt::TextFile::-1::1717624348::0::1::::<><>::
+::res://Assets/Scripts/::1717713821
+global.gd::GDScript::-1::1717624348::0::1::::<>Node<>::
+level.gd::GDScript::-1::1717713821::0::1::::<>Node2D<>::
+::res://Scenes/::1717718262
+a rellenar.txt::TextFile::-1::1717624348::0::1::::<><>::
+level.tscn::PackedScene::3427241909041866391::1717718262::0::1::::<><>::res://Assets/Scripts/level.gd<>uid://dcwdi2w30hock::::res://Assets/Enviroment/Level1/Background/layer_1.png<>uid://b1j7nmo6kmud::::res://Assets/Enviroment/Level1/Background/layer_2.png<>uid://b7kgh3si26bhg::::res://Assets/Enviroment/Level1/Background/layer_3.png<>uid://dywjekwn3whvr::::res://Assets/Enviroment/Level1/Foreground/demcastle2d.png

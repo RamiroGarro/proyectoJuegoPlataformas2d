@@ -1,1 +1,2 @@
-res://Assets/Scripts/global.gd
+res://Scenes/level.tscn
+res://Assets/Scripts/level.gd
