@@ -1,4 +1,4 @@
-[gd_scene load_steps=25 format=3 uid="uid://b1kequjl8b5nn"]
+[gd_scene load_steps=26 format=3 uid="uid://b77qmd5gxw4id"]
 
 [ext_resource type="Script" path="res://Assets/Scripts/bomb.gd" id="1_kae5d"]
 [ext_resource type="Texture2D" uid="uid://d2r26i7ejbo47" path="res://Assets/Enviroment/Bomb/trap_bomb_idle.png" id="2_p34nm"]
@@ -23,12 +23,12 @@
 [ext_resource type="Texture2D" uid="uid://dtmfiyir70agc" path="res://Assets/Enviroment/Bomb/trap_bomb_explosion_8.png" id="21_scr5b"]
 [ext_resource type="Texture2D" uid="uid://b7bknpkv8ghx5" path="res://Assets/Enviroment/Bomb/trap_bomb_explosion_9.png" id="22_4ym62"]
 
-[sub_resource type="CircleShape2D" id="CircleShape2D_tihi3"]
-radius = 9.0
-
-[sub_resource type="SpriteFrames" id="SpriteFrames_r4pwq"]
+[sub_resource type="SpriteFrames" id="SpriteFrames_qqbby"]
 animations = [{
 "frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_p34nm")
+}, {
 "duration": 1.0,
 "texture": ExtResource("3_ndwh8")
 }, {
@@ -66,6 +66,14 @@ animations = [{
 "texture": ExtResource("14_a10uc")
 }, {
 "duration": 1.0,
+"texture": ExtResource("22_4ym62")
+}],
+"loop": false,
+"name": &"explode",
+"speed": 8.0
+}, {
+"frames": [{
+"duration": 1.0,
 "texture": ExtResource("15_34jqu")
 }, {
 "duration": 1.0,
@@ -90,28 +98,38 @@ animations = [{
 "texture": ExtResource("22_4ym62")
 }],
 "loop": false,
-"name": &"explode",
+"name": &"explosion",
 "speed": 8.0
 }]
 
-[node name="Bomb" type="Node2D"]
+[sub_resource type="CircleShape2D" id="CircleShape2D_luaam"]
+radius = 9.05539
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_1e5bx"]
+radius = 42.0
+
+[node name="Bomb" type="Area2D"]
+collision_layer = 16
 script = ExtResource("1_kae5d")
 
-[node name="Sprite" type="Sprite2D" parent="."]
-position = Vector2(-32, -43)
-texture = ExtResource("2_p34nm")
-centered = false
+[node name="Sprites" type="AnimatedSprite2D" parent="."]
+light_mask = 0
+sprite_frames = SubResource("SpriteFrames_qqbby")
+animation = &"explode"
 
-[node name="Area2D" type="Area2D" parent="."]
+[node name="CollisionBomb" type="CollisionShape2D" parent="."]
+light_mask = 0
+position = Vector2(0, 2)
+shape = SubResource("CircleShape2D_luaam")
+
+[node name="AreaExplosion" type="Area2D" parent="."]
+light_mask = 16
 collision_layer = 16
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
-position = Vector2(-0.5, -9)
-shape = SubResource("CircleShape2D_tihi3")
+[node name="CollisionExplosion" type="CollisionShape2D" parent="AreaExplosion"]
+light_mask = 16
+shape = SubResource("CircleShape2D_1e5bx")
+disabled = true
 
-[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
-position = Vector2(0, -9)
-sprite_frames = SubResource("SpriteFrames_r4pwq")
-animation = &"explode"
-frame = 19
-frame_progress = 1.0
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]
+[connection signal="body_entered" from="AreaExplosion" to="." method="_on_area_explosion_body_entered"]

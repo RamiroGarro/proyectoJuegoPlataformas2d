@@ -66,12 +66,14 @@ size_flags_vertical = 4
 [node name="Restart" type="Button" parent="GameOver/Container/Buttons"]
 custom_minimum_size = Vector2(100, 0)
 layout_mode = 2
+mouse_filter = 1
 theme_override_styles/normal = SubResource("StyleBoxFlat_h1v8j")
 text = "Reiniciar"
 
 [node name="Exit" type="Button" parent="GameOver/Container/Buttons"]
 custom_minimum_size = Vector2(100, 0)
 layout_mode = 2
+mouse_filter = 1
 theme_override_styles/normal = SubResource("StyleBoxFlat_y5dmo")
 text = "Salir"
 
@@ -116,18 +118,21 @@ size_flags_vertical = 4
 [node name="Restart" type="Button" parent="Pause/Container/Buttons"]
 custom_minimum_size = Vector2(100, 0)
 layout_mode = 2
+mouse_filter = 1
 theme_override_styles/normal = SubResource("StyleBoxFlat_h1v8j")
 text = "Reiniciar"
 
 [node name="Resume" type="Button" parent="Pause/Container/Buttons"]
 custom_minimum_size = Vector2(100, 0)
 layout_mode = 2
+mouse_filter = 1
 theme_override_styles/normal = SubResource("StyleBoxFlat_y5dmo")
 text = "Reanudar"
 
 [node name="Exit" type="Button" parent="Pause/Container/Buttons"]
 custom_minimum_size = Vector2(100, 0)
 layout_mode = 2
+mouse_filter = 1
 theme_override_styles/normal = SubResource("StyleBoxFlat_y5dmo")
 text = "Salir"
 
