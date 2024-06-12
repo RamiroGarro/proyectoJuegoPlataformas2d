@@ -1,0 +1,44 @@
+[gd_scene load_steps=5 format=3 uid="uid://3l0jaog7q70x"]
+
+[sub_resource type="Gradient" id="Gradient_2np1t"]
+colors = PackedColorArray(1, 1, 1, 1, 1, 1, 1, 0)
+
+[sub_resource type="GradientTexture1D" id="GradientTexture1D_66wbp"]
+gradient = SubResource("Gradient_2np1t")
+
+[sub_resource type="ParticleProcessMaterial" id="ParticleProcessMaterial_3ykhh"]
+particle_flag_disable_z = true
+emission_shape = 3
+emission_box_extents = Vector3(550, 1, 1)
+gravity = Vector3(0, 20, 0)
+radial_accel_min = -1.0
+radial_accel_max = -1.0
+damping_min = 5.0
+damping_max = 5.0
+scale_min = 2.0
+scale_max = 5.0
+color_ramp = SubResource("GradientTexture1D_66wbp")
+collision_mode = 1
+collision_friction = 1.0
+collision_bounce = 0.0
+
+[sub_resource type="GDScript" id="GDScript_o4feg"]
+script/source = "extends GPUParticles2D
+
+
+# Called when the node enters the scene tree for the first time.
+func _ready():
+	pass # Replace with function body.
+
+
+# Called every frame. 'delta' is the elapsed time since the previous frame.
+func _process(delta):
+	pass
+"
+
+[node name="snowGenerated" type="GPUParticles2D"]
+position = Vector2(571, 6)
+amount = 200
+process_material = SubResource("ParticleProcessMaterial_3ykhh")
+lifetime = 20.0
+script = SubResource("GDScript_o4feg")
