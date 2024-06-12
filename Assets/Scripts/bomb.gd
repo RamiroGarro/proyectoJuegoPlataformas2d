@@ -1,20 +1,17 @@
 extends Node2D
 
-@onready var sprite = $Sprite
-@onready var explosion_animation = $AnimatedSprite
-@onready var collision_area = $Area2D
+func _on_body_entered(body):
+	if body is Player:
+		$Sprites.play()
+		await $Sprites.animation_finished
+		$AreaExplosion/CollisionExplosion.disabled = false
+		$Sprites.set_animation("explosion")
+		$Sprites.play()
+		await $Sprites.animation_finished
+		$AreaExplosion/CollisionExplosion.disabled = true
+		self.queue_free()
+	
+func _on_area_explosion_body_entered(body):
+	if body is Player:
+		body.damage_ctrl()
 
-func _ready():
-	collision_area.body_entered.connect(_on_Bomb_body_entered)
-
-func _on_Bomb_body_entered(body):
-	if body.name == "Player":
-		explode()
-
-func explode():
-	collision_area.monitoring = false
-	sprite.visible = false
-	explosion_animation.visible = true
-	explosion_animation.play("explode")
-	await explosion_animation.finished
-	queue_free()
