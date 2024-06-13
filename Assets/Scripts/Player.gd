@@ -1,5 +1,5 @@
 extends CharacterBody2D
-class_name Player
+class_name player
 
 var axis : Vector2 = Vector2.ZERO
 var death : bool = false
