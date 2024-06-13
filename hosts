@@ -1,0 +1,12 @@
+# This is a sample HOSTS file used by Microsoft TCP/IP for Windows.
+
+# localhost name resolution is handled within DNS itself.
+	127.0.0.1       localhost
+	::1             localhost
+
+
+	
+46.101.172.11 pes6gate-ec.winning-eleven.net    # PESGate Sixserver
+46.101.172.11 we9stun.winning-eleven.net          # Stunserver
+
+
