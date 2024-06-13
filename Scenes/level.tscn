@@ -8,7 +8,7 @@
 [ext_resource type="Texture2D" uid="uid://b1j7nmo6kmud" path="res://Assets/Enviroment/Level1/Background/layer_2.png" id="3_5p2oj"]
 [ext_resource type="Texture2D" uid="uid://b7kgh3si26bhg" path="res://Assets/Enviroment/Level1/Background/layer_3.png" id="4_gt5la"]
 [ext_resource type="Texture2D" uid="uid://dywjekwn3whvr" path="res://Assets/Enviroment/Level1/Foreground/demcastle2d.png" id="5_8qo5v"]
-[ext_resource type="AudioStream" uid="uid://b5ct14bak8ikr" path="res://Assets/Audio/night_theme_1.wav" id="6_emwqh"]
+[ext_resource type="AudioStream" uid="uid://b5ct14bak8ikr" path="res://Assets/Audio/Level1.wav" id="6_emwqh"]
 [ext_resource type="PackedScene" uid="uid://beaxcyxvibmni" path="res://Scenes/spike.tscn" id="9_b6jji"]
 [ext_resource type="PackedScene" uid="uid://b77qmd5gxw4id" path="res://Scenes/bomb.tscn" id="9_r7ofi"]
 

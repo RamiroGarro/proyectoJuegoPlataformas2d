@@ -1,6 +1,7 @@
-[gd_scene load_steps=5 format=3 uid="uid://iohi0not48gn"]
+[gd_scene load_steps=6 format=3 uid="uid://iohi0not48gn"]
 
 [ext_resource type="Script" path="res://Assets/Scripts/gui.gd" id="1_g154o"]
+[ext_resource type="FontFile" uid="uid://bbuvge2p1vl7p" path="res://Assets/Fontpack/linux-libertine/LinLibertine_5.3.0_2012_07_02/LinLibertineOTF_5.3.0_2012_07_02/LinLibertine_I.otf" id="2_1swpd"]
 [ext_resource type="AudioStream" uid="uid://cutecitrj26oo" path="res://Assets/Audio/gameover.wav" id="2_hcf7f"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_h1v8j"]
@@ -24,7 +25,8 @@ grow_vertical = 2
 layout_mode = 2
 size_flags_vertical = 0
 theme_override_colors/font_color = Color(0.982343, 0.982342, 0.982342, 1)
-theme_override_font_sizes/font_size = 11
+theme_override_fonts/font = ExtResource("2_1swpd")
+theme_override_font_sizes/font_size = 14
 text = "SCORE: 0000"
 horizontal_alignment = 1
 
@@ -55,6 +57,7 @@ grow_vertical = 2
 
 [node name="Label" type="Label" parent="GameOver/Container"]
 layout_mode = 2
+theme_override_fonts/font = ExtResource("2_1swpd")
 text = "FIN DEL JUEGO"
 horizontal_alignment = 1
 
@@ -66,12 +69,16 @@ size_flags_vertical = 4
 [node name="Restart" type="Button" parent="GameOver/Container/Buttons"]
 custom_minimum_size = Vector2(100, 0)
 layout_mode = 2
+theme_override_fonts/font = ExtResource("2_1swpd")
+theme_override_font_sizes/font_size = 14
 theme_override_styles/normal = SubResource("StyleBoxFlat_h1v8j")
 text = "Reiniciar"
 
 [node name="Exit" type="Button" parent="GameOver/Container/Buttons"]
 custom_minimum_size = Vector2(100, 0)
 layout_mode = 2
+theme_override_fonts/font = ExtResource("2_1swpd")
+theme_override_font_sizes/font_size = 14
 theme_override_styles/normal = SubResource("StyleBoxFlat_y5dmo")
 text = "Salir"
 
@@ -105,6 +112,7 @@ grow_vertical = 2
 
 [node name="Label" type="Label" parent="Pause/Container"]
 layout_mode = 2
+theme_override_fonts/font = ExtResource("2_1swpd")
 text = "PAUSA"
 horizontal_alignment = 1
 
@@ -116,18 +124,24 @@ size_flags_vertical = 4
 [node name="Restart" type="Button" parent="Pause/Container/Buttons"]
 custom_minimum_size = Vector2(100, 0)
 layout_mode = 2
+theme_override_fonts/font = ExtResource("2_1swpd")
+theme_override_font_sizes/font_size = 14
 theme_override_styles/normal = SubResource("StyleBoxFlat_h1v8j")
 text = "Reiniciar"
 
 [node name="Resume" type="Button" parent="Pause/Container/Buttons"]
 custom_minimum_size = Vector2(100, 0)
 layout_mode = 2
+theme_override_fonts/font = ExtResource("2_1swpd")
+theme_override_font_sizes/font_size = 14
 theme_override_styles/normal = SubResource("StyleBoxFlat_y5dmo")
 text = "Reanudar"
 
 [node name="Exit" type="Button" parent="Pause/Container/Buttons"]
 custom_minimum_size = Vector2(100, 0)
 layout_mode = 2
+theme_override_fonts/font = ExtResource("2_1swpd")
+theme_override_font_sizes/font_size = 14
 theme_override_styles/normal = SubResource("StyleBoxFlat_y5dmo")
 text = "Salir"
 

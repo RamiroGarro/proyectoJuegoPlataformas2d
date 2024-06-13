@@ -1,0 +1,102 @@
+[gd_scene load_steps=10 format=3 uid="uid://fkad3le1hvp3"]
+
+[ext_resource type="Script" path="res://Assets/Scripts/menu.gd" id="1_pvf3u"]
+[ext_resource type="FontFile" uid="uid://bbuvge2p1vl7p" path="res://Assets/Fontpack/fonts/linux-libertine/LinLibertine_5.3.0_2012_07_02/LinLibertineOTF_5.3.0_2012_07_02/LinLibertine_I.otf" id="2_ipctx"]
+[ext_resource type="PackedScene" uid="uid://3l0jaog7q70x" path="res://Scenes/snow_generated.tscn" id="3_uibt2"]
+[ext_resource type="PackedScene" uid="uid://cibw61swcss66" path="res://Scenes/fire.tscn" id="4_76ncf"]
+[ext_resource type="Texture2D" uid="uid://ejhgraih31p5" path="res://Assets/soulsBackground/dsbgspade.jpg" id="5_myveo"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_a8o0u"]
+bg_color = Color(0.184314, 0.227451, 0.25098, 0.588235)
+border_width_left = 2
+border_width_bottom = 2
+border_color = Color(0.221918, 0.296715, 0.343567, 1)
+corner_radius_top_left = 13
+corner_radius_top_right = 13
+corner_radius_bottom_right = 13
+corner_radius_bottom_left = 13
+shadow_size = 6
+shadow_offset = Vector2(-3, 3)
+
+[sub_resource type="Theme" id="Theme_ywrc3"]
+Button/styles/focus = null
+Button/styles/hover = null
+Button/styles/normal = SubResource("StyleBoxFlat_a8o0u")
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ng63d"]
+bg_color = Color(0.184314, 0.227451, 0.25098, 0.588235)
+border_width_left = 2
+border_width_bottom = 2
+border_color = Color(0.223529, 0.298039, 0.345098, 1)
+corner_radius_top_left = 13
+corner_radius_top_right = 13
+corner_radius_bottom_right = 13
+corner_radius_bottom_left = 13
+shadow_size = 6
+shadow_offset = Vector2(-3, 3)
+
+[sub_resource type="Theme" id="Theme_rpj1p"]
+Button/styles/normal = SubResource("StyleBoxFlat_ng63d")
+
+[node name="Menu" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_top = 2.0
+offset_bottom = 2.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_pvf3u")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="."]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = 212.0
+offset_top = -250.0
+offset_right = 512.0
+offset_bottom = -86.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="startButton" type="Button" parent="VBoxContainer"]
+z_index = 1
+custom_minimum_size = Vector2(250, 80)
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+theme = SubResource("Theme_ywrc3")
+theme_override_fonts/font = ExtResource("2_ipctx")
+theme_override_font_sizes/font_size = 30
+text = "START"
+
+[node name="quitButton" type="Button" parent="VBoxContainer"]
+z_index = 1
+custom_minimum_size = Vector2(250, 80)
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+theme = SubResource("Theme_rpj1p")
+theme_override_fonts/font = ExtResource("2_ipctx")
+theme_override_font_sizes/font_size = 20
+text = "QUIT"
+
+[node name="snowGenerated" parent="." instance=ExtResource("3_uibt2")]
+z_index = 1
+
+[node name="fire" parent="." instance=ExtResource("4_76ncf")]
+z_index = 1
+position = Vector2(382, 572)
+
+[node name="Dsbgspade" type="Sprite2D" parent="."]
+z_index = -1
+position = Vector2(575.5, 322)
+scale = Vector2(0.899219, 0.81)
+texture = ExtResource("5_myveo")
+
+[connection signal="pressed" from="VBoxContainer/startButton" to="." method="_on_start_button_pressed"]
+[connection signal="pressed" from="VBoxContainer/quitButton" to="." method="_on_quit_button_pressed"]

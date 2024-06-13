@@ -1,10 +1,11 @@
-[gd_scene load_steps=8 format=3 uid="uid://beaxcyxvibmni"]
+[gd_scene load_steps=9 format=3 uid="uid://beaxcyxvibmni"]
 
 [ext_resource type="Texture2D" uid="uid://k0wwa7xso4x4" path="res://Assets/Enviroment/Spike/trap_spike_1.png" id="1_bi0h3"]
 [ext_resource type="Script" path="res://Assets/Scripts/spike.gd" id="1_hhgnp"]
 [ext_resource type="Texture2D" uid="uid://mkisbgyyrh0j" path="res://Assets/Enviroment/Spike/trap_spike_2.png" id="2_q7lxm"]
 [ext_resource type="Texture2D" uid="uid://cjplm4e2mkfxg" path="res://Assets/Enviroment/Spike/trap_spike_3.png" id="3_kwiey"]
 [ext_resource type="Texture2D" uid="uid://bpcwkgxen2bmd" path="res://Assets/Enviroment/Spike/trap_spike_4.png" id="4_js634"]
+[ext_resource type="AudioStream" uid="uid://b4mrxfq3w43uu" path="res://Assets/Audio/Spike.mp3" id="6_sijhb"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_h24wk"]
 animations = [{
@@ -43,5 +44,8 @@ animation = &"On"
 z_as_relative = false
 position = Vector2(-0.5, -5)
 shape = SubResource("RectangleShape2D_jdrvq")
+
+[node name="Sound" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("6_sijhb")
 
 [connection signal="body_entered" from="." to="." method="_on_body_entered"]
