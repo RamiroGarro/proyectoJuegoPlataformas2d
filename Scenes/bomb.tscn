@@ -1,4 +1,4 @@
-[gd_scene load_steps=26 format=3 uid="uid://b77qmd5gxw4id"]
+[gd_scene load_steps=27 format=3 uid="uid://b77qmd5gxw4id"]
 
 [ext_resource type="Script" path="res://Assets/Scripts/bomb.gd" id="1_kae5d"]
 [ext_resource type="Texture2D" uid="uid://d2r26i7ejbo47" path="res://Assets/Enviroment/Bomb/trap_bomb_idle.png" id="2_p34nm"]
@@ -22,6 +22,7 @@
 [ext_resource type="Texture2D" uid="uid://dk0tgpjbt1jhw" path="res://Assets/Enviroment/Bomb/trap_bomb_explosion_7.png" id="20_pdgyr"]
 [ext_resource type="Texture2D" uid="uid://dtmfiyir70agc" path="res://Assets/Enviroment/Bomb/trap_bomb_explosion_8.png" id="21_scr5b"]
 [ext_resource type="Texture2D" uid="uid://b7bknpkv8ghx5" path="res://Assets/Enviroment/Bomb/trap_bomb_explosion_9.png" id="22_4ym62"]
+[ext_resource type="AudioStream" uid="uid://2lt6t7bmjkw4" path="res://Assets/Audio/Bomb.mp3" id="23_t1i4r"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_qqbby"]
 animations = [{
@@ -130,6 +131,9 @@ collision_layer = 16
 light_mask = 16
 shape = SubResource("CircleShape2D_1e5bx")
 disabled = true
+
+[node name="Sound" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("23_t1i4r")
 
 [connection signal="body_entered" from="." to="." method="_on_body_entered"]
 [connection signal="body_entered" from="AreaExplosion" to="." method="_on_area_explosion_body_entered"]
