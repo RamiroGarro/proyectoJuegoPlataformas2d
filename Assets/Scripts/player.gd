@@ -89,5 +89,3 @@ func _on_sprites_animation_finished():
 		gui.game_over()
 	if $Sprites.animation == "Attack":
 		sword_attack = false
-
-

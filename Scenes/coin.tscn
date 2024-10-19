@@ -1,0 +1,76 @@
+[gd_scene load_steps=11 format=3 uid="uid://ujhspbjixoxy"]
+
+[ext_resource type="Texture2D" uid="uid://cubvacys6vkjk" path="res://Assets/Collectibles/moneda10.png" id="1_536rk"]
+[ext_resource type="Script" path="res://Assets/Scripts/coin.gd" id="1_g1xb4"]
+[ext_resource type="Texture2D" uid="uid://drk6kcax0subw" path="res://Assets/Collectibles/moneda12.png" id="2_hjs5m"]
+[ext_resource type="Texture2D" uid="uid://d0uyb6ux1l8ml" path="res://Assets/Collectibles/moneda2.png" id="2_tyoih"]
+[ext_resource type="Texture2D" uid="uid://b0ku4e13lt7s6" path="res://Assets/Collectibles/moneda3.png" id="3_2t5am"]
+[ext_resource type="Texture2D" uid="uid://csravcuepitnk" path="res://Assets/Collectibles/moneda13.png" id="3_8gv18"]
+[ext_resource type="Texture2D" uid="uid://b4mscr1k80isy" path="res://Assets/Collectibles/moneda4.png" id="4_byy8f"]
+[ext_resource type="AudioStream" uid="uid://60x5aw67po7n" path="res://Assets/Audio/Coin.wav" id="7_oyx3l"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_8twdm"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1_536rk")
+}, {
+"duration": 1.0,
+"texture": ExtResource("2_hjs5m")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_8gv18")
+}, {
+"duration": 1.0,
+"texture": ExtResource("2_hjs5m")
+}, {
+"duration": 1.0,
+"texture": ExtResource("1_536rk")
+}],
+"loop": true,
+"name": &"moneda_activa",
+"speed": 12.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1_536rk")
+}, {
+"duration": 1.0,
+"texture": ExtResource("2_tyoih")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_2t5am")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_byy8f")
+}],
+"loop": false,
+"name": &"moneda_desactiva",
+"speed": 7.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_1bytj"]
+size = Vector2(2694, 2580)
+
+[node name="Area2D" type="Area2D"]
+scale = Vector2(0.005, 0.005)
+collision_layer = 8
+monitorable = false
+script = ExtResource("1_g1xb4")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+position = Vector2(-6.31372, 66.426)
+scale = Vector2(1.0915, 1.01978)
+sprite_frames = SubResource("SpriteFrames_8twdm")
+animation = &"moneda_desactiva"
+autoplay = "moneda_activa"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(5.68628, 62.426)
+shape = SubResource("RectangleShape2D_1bytj")
+
+[node name="SoundCoin" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("7_oyx3l")
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]
+[connection signal="finished" from="SoundCoin" to="." method="_on_sound_coin_finished"]
