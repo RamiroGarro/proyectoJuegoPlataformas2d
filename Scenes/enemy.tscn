@@ -1,0 +1,121 @@
+[gd_scene load_steps=17 format=3 uid="uid://dv3m2kdww5dbo"]
+
+[ext_resource type="Script" path="res://Assets/Scripts/enemy.gd" id="1_1p1gj"]
+[ext_resource type="Texture2D" uid="uid://dl4xid47deb3w" path="res://Assets/Characters/Enemys/Orc_Warrior/Dead.png" id="2_d5hq4"]
+[ext_resource type="Texture2D" uid="uid://c4xfouwlu6kv1" path="res://Assets/Characters/Enemys/Orc_Warrior/Run_1.png" id="3_dwrim"]
+[ext_resource type="AudioStream" uid="uid://df7asldnuhm03" path="res://Assets/Audio/Goblin Death.mp3" id="4_1quto"]
+[ext_resource type="Texture2D" uid="uid://bu0c4em1h5dik" path="res://Assets/Characters/Enemys/Orc_Warrior/Run_2.png" id="4_3bwau"]
+[ext_resource type="Texture2D" uid="uid://d17j7il3vwsyv" path="res://Assets/Characters/Enemys/Orc_Warrior/Run_3.png" id="5_cg2xe"]
+[ext_resource type="Texture2D" uid="uid://dibg1jiv5cq4v" path="res://Assets/Characters/Enemys/Orc_Warrior/Run_4.png" id="6_hd7xf"]
+[ext_resource type="Texture2D" uid="uid://bmtuq1m38fg2f" path="res://Assets/Characters/Enemys/Orc_Warrior/Run_5.png" id="7_apj6t"]
+[ext_resource type="Texture2D" uid="uid://d1ggn406ba6jq" path="res://Assets/Characters/Enemys/Orc_Warrior/Run_6.png" id="8_h216f"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_j6dsk"]
+atlas = ExtResource("2_d5hq4")
+region = Rect2(0, 0, 96, 96)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_fbeg8"]
+atlas = ExtResource("2_d5hq4")
+region = Rect2(96, 0, 96, 96)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_3iiyx"]
+atlas = ExtResource("2_d5hq4")
+region = Rect2(192, 0, 96, 96)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ydhm7"]
+atlas = ExtResource("2_d5hq4")
+region = Rect2(288, 0, 96, 96)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_wymu3"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_j6dsk")
+}, {
+"duration": 1.5,
+"texture": SubResource("AtlasTexture_fbeg8")
+}, {
+"duration": 1.5,
+"texture": SubResource("AtlasTexture_3iiyx")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ydhm7")
+}],
+"loop": false,
+"name": &"death",
+"speed": 10.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("3_dwrim")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_3bwau")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_cg2xe")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_hd7xf")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_apj6t")
+}, {
+"duration": 1.0,
+"texture": ExtResource("8_h216f")
+}],
+"loop": true,
+"name": &"walk",
+"speed": 8.0
+}]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_1ib6s"]
+radius = 15.7143
+height = 59.6451
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_nhtj5"]
+radius = 17.1429
+height = 60.0
+
+[node name="Enemy" type="CharacterBody2D"]
+scale = Vector2(0.7, 0.7)
+collision_layer = 2
+collision_mask = 23
+platform_floor_layers = 4294967044
+platform_wall_layers = 4
+script = ExtResource("1_1p1gj")
+
+[node name="Sprite" type="AnimatedSprite2D" parent="."]
+texture_filter = 6
+scale = Vector2(1, 1.00595)
+sprite_frames = SubResource("SpriteFrames_wymu3")
+animation = &"walk"
+autoplay = "walk"
+frame_progress = 0.031617
+speed_scale = 2.0
+
+[node name="RayGround" type="RayCast2D" parent="Sprite"]
+position = Vector2(15.7143, 48.2841)
+exclude_parent = false
+target_position = Vector2(0, 3)
+collision_mask = 4
+hit_from_inside = true
+
+[node name="AreaHit" type="Area2D" parent="Sprite"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Sprite/AreaHit"]
+position = Vector2(4.28571, 17.0415)
+shape = SubResource("CapsuleShape2D_1ib6s")
+debug_color = Color(0.109808, 0.589609, 0.734831, 0.42)
+
+[node name="DeathSound" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("4_1quto")
+volume_db = 12.093
+
+[node name="Collision" type="CollisionShape2D" parent="."]
+position = Vector2(0, 18.5714)
+shape = SubResource("CapsuleShape2D_nhtj5")
+debug_color = Color(0.624124, 0.389768, 0.920938, 0.42)
+
+[connection signal="body_entered" from="Sprite/AreaHit" to="." method="_on_area_hit_body_entered"]
+[connection signal="finished" from="DeathSound" to="." method="_on_death_sound_finished"]

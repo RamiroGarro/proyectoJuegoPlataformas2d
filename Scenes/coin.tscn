@@ -1,13 +1,13 @@
 [gd_scene load_steps=11 format=3 uid="uid://ujhspbjixoxy"]
 
-[ext_resource type="Texture2D" uid="uid://cubvacys6vkjk" path="res://Assets/Collectibles/moneda10.png" id="1_536rk"]
+[ext_resource type="Texture2D" uid="uid://bj0ljsnxax2xw" path="res://Assets/Collectibles/moneda10.png" id="1_536rk"]
 [ext_resource type="Script" path="res://Assets/Scripts/coin.gd" id="1_g1xb4"]
-[ext_resource type="Texture2D" uid="uid://drk6kcax0subw" path="res://Assets/Collectibles/moneda12.png" id="2_hjs5m"]
-[ext_resource type="Texture2D" uid="uid://d0uyb6ux1l8ml" path="res://Assets/Collectibles/moneda2.png" id="2_tyoih"]
-[ext_resource type="Texture2D" uid="uid://b0ku4e13lt7s6" path="res://Assets/Collectibles/moneda3.png" id="3_2t5am"]
-[ext_resource type="Texture2D" uid="uid://csravcuepitnk" path="res://Assets/Collectibles/moneda13.png" id="3_8gv18"]
-[ext_resource type="Texture2D" uid="uid://b4mscr1k80isy" path="res://Assets/Collectibles/moneda4.png" id="4_byy8f"]
-[ext_resource type="AudioStream" uid="uid://60x5aw67po7n" path="res://Assets/Audio/Coin.wav" id="7_oyx3l"]
+[ext_resource type="Texture2D" uid="uid://ndaj6v3ycgv8" path="res://Assets/Collectibles/moneda12.png" id="2_hjs5m"]
+[ext_resource type="Texture2D" uid="uid://dbwqh7t2m13xu" path="res://Assets/Collectibles/moneda2.png" id="2_tyoih"]
+[ext_resource type="Texture2D" uid="uid://c8w8k0js62233" path="res://Assets/Collectibles/moneda3.png" id="3_2t5am"]
+[ext_resource type="Texture2D" uid="uid://chm5hmo4r2sfe" path="res://Assets/Collectibles/moneda13.png" id="3_8gv18"]
+[ext_resource type="Texture2D" uid="uid://de6gulflitd5q" path="res://Assets/Collectibles/moneda4.png" id="4_byy8f"]
+[ext_resource type="AudioStream" uid="uid://5bu0ebchhgsg" path="res://Assets/Audio/Coin.wav" id="7_oyx3l"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_8twdm"]
 animations = [{
@@ -50,7 +50,7 @@ animations = [{
 }]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_1bytj"]
-size = Vector2(2694, 2580)
+size = Vector2(2400, 2427.57)
 
 [node name="Area2D" type="Area2D"]
 scale = Vector2(0.005, 0.005)
@@ -59,14 +59,13 @@ monitorable = false
 script = ExtResource("1_g1xb4")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
-position = Vector2(-6.31372, 66.426)
-scale = Vector2(1.0915, 1.01978)
 sprite_frames = SubResource("SpriteFrames_8twdm")
-animation = &"moneda_desactiva"
+animation = &"moneda_activa"
 autoplay = "moneda_activa"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(5.68628, 62.426)
+texture_repeat = 1
+position = Vector2(5.96046e-06, -13.787)
 shape = SubResource("RectangleShape2D_1bytj")
 
 [node name="SoundCoin" type="AudioStreamPlayer" parent="."]
