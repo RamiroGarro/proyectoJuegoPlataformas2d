@@ -1,6 +1,7 @@
 extends Control
 
 func _ready():
+	Input.set_mouse_mode(Input.MOUSE_MODE_HIDDEN)
 	$Buttons/Start.grab_focus()	
 	$Music.play()
 

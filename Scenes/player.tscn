@@ -1,4 +1,4 @@
-[gd_scene load_steps=48 format=3 uid="uid://dnlke3jvpafip"]
+[gd_scene load_steps=58 format=3 uid="uid://dnlke3jvpafip"]
 
 [ext_resource type="Texture2D" uid="uid://blloylqr1cifo" path="res://Assets/Characters/Player/Attack/Attack 0.png" id="1_jq6uu"]
 [ext_resource type="Script" path="res://Assets/Scripts/player.gd" id="1_k1wpc"]
@@ -16,15 +16,25 @@
 [ext_resource type="Texture2D" uid="uid://ijhn83m6htl0" path="res://Assets/Characters/Player/Death/Death 8.png" id="13_miwon"]
 [ext_resource type="Texture2D" uid="uid://qs50bl2amg45" path="res://Assets/Characters/Player/Death/Death 7.png" id="14_47586"]
 [ext_resource type="Texture2D" uid="uid://d3reqtsohphaj" path="res://Assets/Characters/Player/Fall/Fall 0.png" id="15_7phao"]
+[ext_resource type="Texture2D" uid="uid://bo6mir5eod0uk" path="res://Assets/Characters/Player/Fade/Fade 0.png" id="16_4nqlo"]
 [ext_resource type="Texture2D" uid="uid://cpyoqyqdtnnrl" path="res://Assets/Characters/Player/Fall/Fall 1.png" id="16_x1g73"]
 [ext_resource type="Texture2D" uid="uid://cbydmme5me6o6" path="res://Assets/Characters/Player/Fall/Fall 2.png" id="17_a4k45"]
+[ext_resource type="Texture2D" uid="uid://dnhjgbwcqwtxc" path="res://Assets/Characters/Player/Fade/Fade 1.png" id="17_s2e6j"]
+[ext_resource type="Texture2D" uid="uid://dabjpmp7terhu" path="res://Assets/Characters/Player/Fade/Fade 2.png" id="18_h85qv"]
 [ext_resource type="Texture2D" uid="uid://shpsqyhg7r83" path="res://Assets/Characters/Player/Idle/Idle 0.png" id="18_vbnx5"]
+[ext_resource type="Texture2D" uid="uid://bye7mdeah8tcr" path="res://Assets/Characters/Player/Fade/Fade 3.png" id="19_0mc1l"]
 [ext_resource type="Texture2D" uid="uid://dphoefaeesk1g" path="res://Assets/Characters/Player/Idle/Idle 1.png" id="19_hdx30"]
+[ext_resource type="Texture2D" uid="uid://cad38ox5mtk6d" path="res://Assets/Characters/Player/Fade/Fade 4.png" id="20_g47yp"]
 [ext_resource type="Texture2D" uid="uid://dsb6gxthi0k52" path="res://Assets/Characters/Player/Idle/Idle 2.png" id="20_usb3u"]
+[ext_resource type="Texture2D" uid="uid://dvr1f4dbkfhjx" path="res://Assets/Characters/Player/Fade/Fade 5.png" id="21_qja7k"]
 [ext_resource type="Texture2D" uid="uid://bnly3cygqmgw7" path="res://Assets/Characters/Player/Idle/Idle 3.png" id="21_rhn8x"]
 [ext_resource type="Texture2D" uid="uid://nlsnxtxs2gu5" path="res://Assets/Characters/Player/Idle/Idle 4.png" id="22_krryw"]
+[ext_resource type="Texture2D" uid="uid://cwgauhwxda1fl" path="res://Assets/Characters/Player/Fade/Fade 6.png" id="22_riil0"]
+[ext_resource type="Texture2D" uid="uid://biveb75x3puu3" path="res://Assets/Characters/Player/Fade/Fade 7.png" id="23_0f2xu"]
 [ext_resource type="Texture2D" uid="uid://bjtcak1euyokb" path="res://Assets/Characters/Player/Idle/Idle 5.png" id="23_1xlf2"]
 [ext_resource type="Texture2D" uid="uid://c2nybw8dinx0d" path="res://Assets/Characters/Player/Idle/Idle 6.png" id="24_gay7b"]
+[ext_resource type="Texture2D" uid="uid://dbiqxeui27vvi" path="res://Assets/Characters/Player/Fade/Fade 8.png" id="24_lpisf"]
+[ext_resource type="Texture2D" uid="uid://u47aj8tposwi" path="res://Assets/Characters/Player/Fade/Fade 9.png" id="25_17k5s"]
 [ext_resource type="Texture2D" uid="uid://w1f5j0l5gsdw" path="res://Assets/Characters/Player/Idle/Idle 8.png" id="25_htu0j"]
 [ext_resource type="Texture2D" uid="uid://dro0efmclap44" path="res://Assets/Characters/Player/Idle/Idle 7.png" id="26_or0be"]
 [ext_resource type="Texture2D" uid="uid://bhr7qlprudafr" path="res://Assets/Characters/Player/Idle/Idle 9.png" id="27_q4gk0"]
@@ -62,7 +72,7 @@ animations = [{
 }],
 "loop": false,
 "name": &"Attack",
-"speed": 8.0
+"speed": 12.0
 }, {
 "frames": [{
 "duration": 1.0,
@@ -101,6 +111,41 @@ animations = [{
 "loop": false,
 "name": &"Death",
 "speed": 8.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("16_4nqlo")
+}, {
+"duration": 1.0,
+"texture": ExtResource("17_s2e6j")
+}, {
+"duration": 1.0,
+"texture": ExtResource("18_h85qv")
+}, {
+"duration": 1.0,
+"texture": ExtResource("19_0mc1l")
+}, {
+"duration": 1.0,
+"texture": ExtResource("20_g47yp")
+}, {
+"duration": 1.0,
+"texture": ExtResource("21_qja7k")
+}, {
+"duration": 1.0,
+"texture": ExtResource("22_riil0")
+}, {
+"duration": 1.0,
+"texture": ExtResource("23_0f2xu")
+}, {
+"duration": 1.0,
+"texture": ExtResource("24_lpisf")
+}, {
+"duration": 1.0,
+"texture": ExtResource("25_17k5s")
+}],
+"loop": false,
+"name": &"Fade",
+"speed": 10.0
 }, {
 "frames": [{
 "duration": 1.0,
@@ -201,12 +246,12 @@ animations = [{
 "speed": 10.0
 }]
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_xurhp"]
+size = Vector2(24, 17)
+
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_ii0ug"]
 radius = 9.0
 height = 36.0
-
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_60yhg"]
-size = Vector2(22, 34)
 
 [node name="Player" type="CharacterBody2D"]
 collision_mask = 31
@@ -215,24 +260,26 @@ platform_wall_layers = 4
 script = ExtResource("1_k1wpc")
 
 [node name="Sprites" type="AnimatedSprite2D" parent="."]
-position = Vector2(0, -1)
 sprite_frames = SubResource("SpriteFrames_5txri")
-animation = &"Idle"
+animation = &"Attack"
 autoplay = "Idle"
-frame_progress = 0.18225
+frame = 3
+frame_progress = 1.0
 
-[node name="HurtBox" type="CollisionShape2D" parent="."]
-position = Vector2(1, 21)
-shape = SubResource("CapsuleShape2D_ii0ug")
-
-[node name="HitBox" type="Area2D" parent="."]
-position = Vector2(18, 20)
+[node name="HitBox" type="Area2D" parent="Sprites"]
+position = Vector2(24, 23)
+disable_mode = 2
 collision_mask = 2
+input_pickable = false
 monitorable = false
 
-[node name="Collision" type="CollisionShape2D" parent="HitBox"]
-position = Vector2(5, 1)
-shape = SubResource("RectangleShape2D_60yhg")
+[node name="Collision" type="CollisionShape2D" parent="Sprites/HitBox"]
+position = Vector2(-2, 1.5)
+shape = SubResource("RectangleShape2D_xurhp")
+
+[node name="Hurtbox" type="CollisionShape2D" parent="."]
+position = Vector2(0, 21)
+shape = SubResource("CapsuleShape2D_ii0ug")
 
 [node name="Audio" type="Node" parent="."]
 
@@ -247,4 +294,3 @@ stream = ExtResource("43_gi0ku")
 stream = ExtResource("44_ttrmy")
 
 [connection signal="animation_finished" from="Sprites" to="." method="_on_sprites_animation_finished"]
-[connection signal="body_entered" from="HitBox" to="." method="_on_hit_box_body_entered"]

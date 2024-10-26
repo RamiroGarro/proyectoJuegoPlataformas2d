@@ -28,10 +28,11 @@ animations = [{
 }]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_jdrvq"]
-size = Vector2(29, 10)
+size = Vector2(29, 9)
 
 [node name="Spike" type="Area2D"]
 collision_layer = 16
+collision_mask = 3
 monitorable = false
 script = ExtResource("1_hhgnp")
 
@@ -42,7 +43,7 @@ animation = &"On"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 z_as_relative = false
-position = Vector2(-0.5, -5)
+position = Vector2(-0.5, -4.5)
 shape = SubResource("RectangleShape2D_jdrvq")
 
 [node name="Sound" type="AudioStreamPlayer" parent="."]

@@ -14,21 +14,20 @@ class_name Enemy
 @export var gravity : int = 16
 
 #no es un personaje controlable, se mueve solo
-var direction : int = 1
+@export var direction : int = 1
 
 func _physics_process(delta):
-	
 	if health > 0: #Esta vivo
 		motion_ctrl()
-
+		
 func motion_ctrl() -> void:
 	#escala del sprite = a la direccion
 	$Sprite.scale.x = direction
-
 	#detecta pared u obstaculo modifica direccion al opuesto
+	
 	if not $Sprite/RayGround.is_colliding() or is_on_wall():
 		direction *= -1
-	
+		
 	velocity.x = direction * speed
 	#Empuja el personaje hacia abajo
 	velocity.y += gravity
@@ -41,21 +40,16 @@ func damage_ctrl(damage : int) -> void:
 	health -= damage
 		
 	if health <= 0: #Se muere
-		$Sprite.set_animation("Death")
+		$Sprite.set_animation("death")
 		$Collision.set_deferred("disabled", true) #set_difered para que no tire advertencia
+		$DeathSound.play(0)
 			
 		gravity = 0 #El enemigo no se hunde en el suelo
-		GLOBAL.score += score #sumamos el puntaje
-			
-func _on_sprite_animation_finished():
-	if $sprite.animation == "Death":
-			queue_free() #elimina el nodo
+		Global.score += score #sumamos el puntaje		
 			
 func _on_area_hit_body_entered(body):
-	if body is Player and health>0:
+	if body is player and health>0:
 		body.damage_ctrl()
-	
-	
 
-
-
+func _on_death_sound_finished():
+	queue_free()
