@@ -1,9 +1,10 @@
-[gd_scene load_steps=7 format=3 uid="uid://iohi0not48gn"]
+[gd_scene load_steps=8 format=3 uid="uid://iohi0not48gn"]
 
 [ext_resource type="Script" path="res://Assets/Scripts/gui.gd" id="1_g154o"]
 [ext_resource type="FontFile" uid="uid://bbuvge2p1vl7p" path="res://Assets/Fontpack/linux-libertine/LinLibertine_5.3.0_2012_07_02/LinLibertineOTF_5.3.0_2012_07_02/LinLibertine_I.otf" id="2_1swpd"]
 [ext_resource type="AudioStream" uid="uid://cutecitrj26oo" path="res://Assets/Audio/gameover.wav" id="2_hcf7f"]
-[ext_resource type="AudioStream" uid="uid://cswjm7oucavod" path="res://Assets/Audio/VictorySound.wav" id="4_1po1d"]
+[ext_resource type="PackedScene" uid="uid://dm1cd2ob3gs4v" path="res://Scenes/control.tscn" id="2_tiwek"]
+[ext_resource type="AudioStream" uid="uid://dh2amlostos2d" path="res://Assets/Audio/VictorySound.wav" id="4_1po1d"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_h1v8j"]
 bg_color = Color(0.122675, 0.0375626, 2.10572e-08, 1)
@@ -14,6 +15,8 @@ bg_color = Color(0.122675, 0.0375626, 2.10572e-08, 1)
 [node name="GUI" type="CanvasLayer"]
 process_mode = 3
 script = ExtResource("1_g154o")
+
+[node name="Control" parent="." instance=ExtResource("2_tiwek")]
 
 [node name="Container" type="MarginContainer" parent="."]
 anchors_preset = 15
@@ -30,6 +33,67 @@ theme_override_fonts/font = ExtResource("2_1swpd")
 theme_override_font_sizes/font_size = 14
 text = "SCORE: 0000"
 horizontal_alignment = 1
+
+[node name="Pause" type="ColorRect" parent="."]
+modulate = Color(1, 1, 1, 0)
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+color = Color(0, 0, 0, 1)
+
+[node name="Container" type="VBoxContainer" parent="Pause"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -61.0
+offset_top = -29.0
+offset_right = 61.0
+offset_bottom = 29.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 0
+
+[node name="Label" type="Label" parent="Pause/Container"]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("2_1swpd")
+text = "PAUSA"
+horizontal_alignment = 1
+
+[node name="Buttons" type="HBoxContainer" parent="Pause/Container"]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+
+[node name="Restart" type="Button" parent="Pause/Container/Buttons"]
+custom_minimum_size = Vector2(100, 0)
+layout_mode = 2
+theme_override_fonts/font = ExtResource("2_1swpd")
+theme_override_font_sizes/font_size = 14
+theme_override_styles/normal = SubResource("StyleBoxFlat_h1v8j")
+text = "Reiniciar"
+
+[node name="Resume" type="Button" parent="Pause/Container/Buttons"]
+custom_minimum_size = Vector2(100, 0)
+layout_mode = 2
+theme_override_fonts/font = ExtResource("2_1swpd")
+theme_override_font_sizes/font_size = 14
+theme_override_styles/normal = SubResource("StyleBoxFlat_h1v8j")
+text = "Reanudar"
+
+[node name="Exit" type="Button" parent="Pause/Container/Buttons"]
+custom_minimum_size = Vector2(100, 0)
+layout_mode = 2
+theme_override_fonts/font = ExtResource("2_1swpd")
+theme_override_font_sizes/font_size = 14
+theme_override_styles/normal = SubResource("StyleBoxFlat_y5dmo")
+text = "Salir"
 
 [node name="GameOver" type="ColorRect" parent="."]
 modulate = Color(1, 1, 1, 0)
@@ -86,66 +150,6 @@ text = "Salir"
 [node name="Sound" type="AudioStreamPlayer2D" parent="GameOver"]
 stream = ExtResource("2_hcf7f")
 
-[node name="Pause" type="ColorRect" parent="."]
-modulate = Color(1, 1, 1, 0)
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
-grow_horizontal = 2
-grow_vertical = 2
-size_flags_horizontal = 4
-size_flags_vertical = 4
-color = Color(0, 0, 0, 1)
-
-[node name="Container" type="VBoxContainer" parent="Pause"]
-layout_mode = 1
-anchors_preset = 8
-anchor_left = 0.5
-anchor_top = 0.5
-anchor_right = 0.5
-anchor_bottom = 0.5
-offset_left = -61.0
-offset_top = -29.0
-offset_right = 61.0
-offset_bottom = 29.0
-grow_horizontal = 2
-grow_vertical = 2
-
-[node name="Label" type="Label" parent="Pause/Container"]
-layout_mode = 2
-theme_override_fonts/font = ExtResource("2_1swpd")
-text = "PAUSA"
-horizontal_alignment = 1
-
-[node name="Buttons" type="HBoxContainer" parent="Pause/Container"]
-layout_mode = 2
-size_flags_horizontal = 4
-size_flags_vertical = 4
-
-[node name="Restart" type="Button" parent="Pause/Container/Buttons"]
-custom_minimum_size = Vector2(100, 0)
-layout_mode = 2
-theme_override_fonts/font = ExtResource("2_1swpd")
-theme_override_font_sizes/font_size = 14
-theme_override_styles/normal = SubResource("StyleBoxFlat_h1v8j")
-text = "Reiniciar"
-
-[node name="Resume" type="Button" parent="Pause/Container/Buttons"]
-custom_minimum_size = Vector2(100, 0)
-layout_mode = 2
-theme_override_fonts/font = ExtResource("2_1swpd")
-theme_override_font_sizes/font_size = 14
-theme_override_styles/normal = SubResource("StyleBoxFlat_y5dmo")
-text = "Reanudar"
-
-[node name="Exit" type="Button" parent="Pause/Container/Buttons"]
-custom_minimum_size = Vector2(100, 0)
-layout_mode = 2
-theme_override_fonts/font = ExtResource("2_1swpd")
-theme_override_font_sizes/font_size = 14
-theme_override_styles/normal = SubResource("StyleBoxFlat_y5dmo")
-text = "Salir"
-
 [node name="Victory" type="ColorRect" parent="."]
 modulate = Color(1, 1, 1, 0)
 anchors_preset = 15
@@ -201,10 +205,10 @@ text = "Salir"
 [node name="Sound" type="AudioStreamPlayer2D" parent="Victory"]
 stream = ExtResource("4_1po1d")
 
-[connection signal="pressed" from="GameOver/Container/Buttons/Restart" to="." method="_on_restart_pressed"]
-[connection signal="pressed" from="GameOver/Container/Buttons/Exit" to="." method="_on_exit_pressed"]
 [connection signal="pressed" from="Pause/Container/Buttons/Restart" to="." method="_on_restart_pressed"]
 [connection signal="pressed" from="Pause/Container/Buttons/Resume" to="." method="_on_resume_pressed"]
 [connection signal="pressed" from="Pause/Container/Buttons/Exit" to="." method="_on_exit_pressed"]
+[connection signal="pressed" from="GameOver/Container/Buttons/Restart" to="." method="_on_restart_pressed"]
+[connection signal="pressed" from="GameOver/Container/Buttons/Exit" to="." method="_on_exit_pressed"]
 [connection signal="pressed" from="Victory/Container/Buttons/Restart" to="." method="_on_restart_pressed"]
 [connection signal="pressed" from="Victory/Container/Buttons/Exit" to="." method="_on_exit_pressed"]

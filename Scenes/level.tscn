@@ -11,7 +11,7 @@
 [ext_resource type="AudioStream" uid="uid://b5ct14bak8ikr" path="res://Assets/Audio/Level1.wav" id="6_emwqh"]
 [ext_resource type="PackedScene" uid="uid://beaxcyxvibmni" path="res://Scenes/spike.tscn" id="9_b6jji"]
 [ext_resource type="PackedScene" uid="uid://b77qmd5gxw4id" path="res://Scenes/bomb.tscn" id="9_r7ofi"]
-[ext_resource type="Texture2D" uid="uid://b61ci26qyhgmq" path="res://Assets/Enviroment/Level1/Foreground/tile_castle.png" id="10_he7cq"]
+[ext_resource type="Texture2D" uid="uid://dmnsu7d6uq433" path="res://Assets/Enviroment/Level1/Foreground/tile_castle.png" id="10_he7cq"]
 [ext_resource type="PackedScene" uid="uid://ujhspbjixoxy" path="res://Scenes/coin.tscn" id="12_c1ilo"]
 [ext_resource type="PackedScene" uid="uid://dv3m2kdww5dbo" path="res://Scenes/enemy.tscn" id="13_ra3bc"]
 [ext_resource type="PackedScene" uid="uid://cwxkcnebh53ag" path="res://Scenes/goal.tscn" id="15_110hj"]
