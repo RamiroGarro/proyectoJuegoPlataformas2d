@@ -1,0 +1,50 @@
+[gd_scene load_steps=11 format=3 uid="uid://dm1cd2ob3gs4v"]
+
+[ext_resource type="Texture2D" uid="uid://ch646te8tl1dq" path="res://Assets/GUI/buttons/shadedDark24.png" id="1_n1r5x"]
+[ext_resource type="Texture2D" uid="uid://d1diabaavt4e" path="res://Assets/GUI/buttons/flatLight22.png" id="2_a072y"]
+[ext_resource type="Texture2D" uid="uid://b0ajrs348c1k4" path="res://Assets/GUI/buttons/shadedDark25.png" id="3_d8c7k"]
+[ext_resource type="Texture2D" uid="uid://dtpxcvntjxo7s" path="res://Assets/GUI/buttons/flatLight23.png" id="4_iv7cu"]
+[ext_resource type="Texture2D" uid="uid://c47wird30wreh" path="res://Assets/GUI/buttons/shadedDark45.png" id="5_xnet1"]
+[ext_resource type="Texture2D" uid="uid://dt8aw46jb10s7" path="res://Assets/GUI/buttons/flatLight43.png" id="6_mw0em"]
+[ext_resource type="Texture2D" uid="uid://bn6ka511hekbw" path="res://Assets/GUI/buttons/shadedDark36.png" id="7_ev140"]
+[ext_resource type="Texture2D" uid="uid://dn82m5yqrjw05" path="res://Assets/GUI/buttons/flatLight34.png" id="8_3msm5"]
+[ext_resource type="Texture2D" uid="uid://c45mpkqfkgd22" path="res://Assets/GUI/buttons/shadedDark14.png" id="9_d0tmm"]
+[ext_resource type="Texture2D" uid="uid://d1symeru0y372" path="res://Assets/GUI/buttons/flatLight12.png" id="10_hm6is"]
+
+[node name="Control" type="CanvasLayer"]
+scale = Vector2(0.5, 0.5)
+transform = Transform2D(0.5, 0, 0, 0.5, 0, 0)
+
+[node name="left" type="TouchScreenButton" parent="."]
+position = Vector2(12, 286)
+scale = Vector2(0.75, 0.75)
+texture_normal = ExtResource("1_n1r5x")
+texture_pressed = ExtResource("2_a072y")
+action = "ui_left"
+
+[node name="right" type="TouchScreenButton" parent="."]
+position = Vector2(80, 286)
+scale = Vector2(0.75, 0.75)
+texture_normal = ExtResource("3_d8c7k")
+texture_pressed = ExtResource("4_iv7cu")
+action = "ui_right"
+
+[node name="jump" type="TouchScreenButton" parent="."]
+position = Vector2(482, 280)
+scale = Vector2(0.9, 0.9)
+texture_normal = ExtResource("5_xnet1")
+texture_pressed = ExtResource("6_mw0em")
+action = "ui_accept"
+
+[node name="attack" type="TouchScreenButton" parent="."]
+position = Vector2(558, 280)
+scale = Vector2(0.9, 0.9)
+texture_normal = ExtResource("7_ev140")
+texture_pressed = ExtResource("8_3msm5")
+action = "ui_attack"
+
+[node name="pause" type="TouchScreenButton" parent="."]
+position = Vector2(582, 6)
+texture_normal = ExtResource("9_d0tmm")
+texture_pressed = ExtResource("10_hm6is")
+action = "ui_pause"
