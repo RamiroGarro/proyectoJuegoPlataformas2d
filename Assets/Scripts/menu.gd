@@ -1,8 +1,8 @@
 extends Control
 
 func _ready():
-	#Input.set_mouse_mode(Input.MOUSE_MODE_HIDDEN)
-	#$Buttons/Start.grab_focus()	
+	Input.set_mouse_mode(Input.MOUSE_MODE_CAPTURED)
+	$Buttons/Start.grab_focus()	
 	$Music.play()
 
 func _on_start_button_pressed():

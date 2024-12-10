@@ -1,14 +1,14 @@
 [gd_scene load_steps=17 format=3 uid="uid://dv3m2kdww5dbo"]
 
 [ext_resource type="Script" path="res://Assets/Scripts/enemy.gd" id="1_1p1gj"]
-[ext_resource type="Texture2D" uid="uid://dl4xid47deb3w" path="res://Assets/Characters/Enemys/Orc_Warrior/Dead.png" id="2_d5hq4"]
-[ext_resource type="Texture2D" uid="uid://c4xfouwlu6kv1" path="res://Assets/Characters/Enemys/Orc_Warrior/Run_1.png" id="3_dwrim"]
-[ext_resource type="AudioStream" uid="uid://df7asldnuhm03" path="res://Assets/Audio/Goblin Death.mp3" id="4_1quto"]
-[ext_resource type="Texture2D" uid="uid://bu0c4em1h5dik" path="res://Assets/Characters/Enemys/Orc_Warrior/Run_2.png" id="4_3bwau"]
-[ext_resource type="Texture2D" uid="uid://d17j7il3vwsyv" path="res://Assets/Characters/Enemys/Orc_Warrior/Run_3.png" id="5_cg2xe"]
-[ext_resource type="Texture2D" uid="uid://dibg1jiv5cq4v" path="res://Assets/Characters/Enemys/Orc_Warrior/Run_4.png" id="6_hd7xf"]
-[ext_resource type="Texture2D" uid="uid://bmtuq1m38fg2f" path="res://Assets/Characters/Enemys/Orc_Warrior/Run_5.png" id="7_apj6t"]
-[ext_resource type="Texture2D" uid="uid://d1ggn406ba6jq" path="res://Assets/Characters/Enemys/Orc_Warrior/Run_6.png" id="8_h216f"]
+[ext_resource type="Texture2D" uid="uid://dju8y4nyienjc" path="res://Assets/Characters/Enemys/Orc_Warrior/Dead.png" id="2_d5hq4"]
+[ext_resource type="Texture2D" uid="uid://bqa1akb43jsv7" path="res://Assets/Characters/Enemys/Orc_Warrior/Run_1.png" id="3_dwrim"]
+[ext_resource type="AudioStream" uid="uid://cf8xrf5drkk1p" path="res://Assets/Audio/Goblin Death.mp3" id="4_1quto"]
+[ext_resource type="Texture2D" uid="uid://b2fvta0yu1ual" path="res://Assets/Characters/Enemys/Orc_Warrior/Run_2.png" id="4_3bwau"]
+[ext_resource type="Texture2D" uid="uid://cjrjh0ay30xa4" path="res://Assets/Characters/Enemys/Orc_Warrior/Run_3.png" id="5_cg2xe"]
+[ext_resource type="Texture2D" uid="uid://dbphhr43trr5i" path="res://Assets/Characters/Enemys/Orc_Warrior/Run_4.png" id="6_hd7xf"]
+[ext_resource type="Texture2D" uid="uid://c5n3osyq7kec" path="res://Assets/Characters/Enemys/Orc_Warrior/Run_5.png" id="7_apj6t"]
+[ext_resource type="Texture2D" uid="uid://bc5k5ijrovg6j" path="res://Assets/Characters/Enemys/Orc_Warrior/Run_6.png" id="8_h216f"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_j6dsk"]
 atlas = ExtResource("2_d5hq4")

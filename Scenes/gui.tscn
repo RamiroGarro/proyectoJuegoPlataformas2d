@@ -1,16 +1,35 @@
-[gd_scene load_steps=8 format=3 uid="uid://iohi0not48gn"]
+[gd_scene load_steps=13 format=3 uid="uid://iohi0not48gn"]
 
 [ext_resource type="Script" path="res://Assets/Scripts/gui.gd" id="1_g154o"]
 [ext_resource type="FontFile" uid="uid://bbuvge2p1vl7p" path="res://Assets/Fontpack/linux-libertine/LinLibertine_5.3.0_2012_07_02/LinLibertineOTF_5.3.0_2012_07_02/LinLibertine_I.otf" id="2_1swpd"]
 [ext_resource type="AudioStream" uid="uid://cutecitrj26oo" path="res://Assets/Audio/gameover.wav" id="2_hcf7f"]
 [ext_resource type="PackedScene" uid="uid://dm1cd2ob3gs4v" path="res://Scenes/control.tscn" id="2_tiwek"]
-[ext_resource type="AudioStream" uid="uid://dh2amlostos2d" path="res://Assets/Audio/VictorySound.wav" id="4_1po1d"]
+[ext_resource type="AudioStream" uid="uid://b2w7bhvqw0622" path="res://Assets/Audio/VictorySound.wav" id="4_1po1d"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_b4loq"]
+outline_size = 10
+outline_color = Color(0, 0, 0, 1)
+
+[sub_resource type="LabelSettings" id="LabelSettings_r7x4g"]
+outline_size = 10
+outline_color = Color(0, 0, 0, 1)
+
+[sub_resource type="LabelSettings" id="LabelSettings_jfglp"]
+font_size = 15
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_h1v8j"]
 bg_color = Color(0.122675, 0.0375626, 2.10572e-08, 1)
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_y5dmo"]
 bg_color = Color(0.122675, 0.0375626, 2.10572e-08, 1)
+
+[sub_resource type="LabelSettings" id="LabelSettings_bu4j7"]
+outline_size = 10
+outline_color = Color(0, 0, 0, 1)
+
+[sub_resource type="LabelSettings" id="LabelSettings_odttc"]
+outline_size = 10
+outline_color = Color(0, 0, 0, 1)
 
 [node name="GUI" type="CanvasLayer"]
 process_mode = 3
@@ -32,6 +51,7 @@ theme_override_colors/font_color = Color(0.982343, 0.982342, 0.982342, 1)
 theme_override_fonts/font = ExtResource("2_1swpd")
 theme_override_font_sizes/font_size = 14
 text = "SCORE: 0000"
+label_settings = SubResource("LabelSettings_b4loq")
 horizontal_alignment = 1
 
 [node name="Pause" type="ColorRect" parent="."]
@@ -64,6 +84,15 @@ mouse_filter = 0
 layout_mode = 2
 theme_override_fonts/font = ExtResource("2_1swpd")
 text = "PAUSA"
+label_settings = SubResource("LabelSettings_r7x4g")
+horizontal_alignment = 1
+
+[node name="Run" type="Label" parent="Pause/Container"]
+layout_mode = 2
+size_flags_vertical = 8
+theme_override_fonts/font = ExtResource("2_1swpd")
+text = "VIDA NÚMERO: "
+label_settings = SubResource("LabelSettings_jfglp")
 horizontal_alignment = 1
 
 [node name="Buttons" type="HBoxContainer" parent="Pause/Container"]
@@ -124,6 +153,15 @@ grow_vertical = 2
 layout_mode = 2
 theme_override_fonts/font = ExtResource("2_1swpd")
 text = "FIN DEL JUEGO"
+label_settings = SubResource("LabelSettings_bu4j7")
+horizontal_alignment = 1
+
+[node name="Run" type="Label" parent="GameOver/Container"]
+layout_mode = 2
+size_flags_vertical = 8
+theme_override_fonts/font = ExtResource("2_1swpd")
+text = "VIDA NÚMERO: "
+label_settings = SubResource("LabelSettings_jfglp")
 horizontal_alignment = 1
 
 [node name="Buttons" type="HBoxContainer" parent="GameOver/Container"]
@@ -149,6 +187,8 @@ text = "Salir"
 
 [node name="Sound" type="AudioStreamPlayer2D" parent="GameOver"]
 stream = ExtResource("2_hcf7f")
+max_distance = 4000.0
+attenuation = 1e-05
 
 [node name="Victory" type="ColorRect" parent="."]
 modulate = Color(1, 1, 1, 0)
@@ -179,6 +219,15 @@ grow_vertical = 2
 layout_mode = 2
 theme_override_fonts/font = ExtResource("2_1swpd")
 text = "¡HAS GANADO!"
+label_settings = SubResource("LabelSettings_odttc")
+horizontal_alignment = 1
+
+[node name="Run" type="Label" parent="Victory/Container"]
+layout_mode = 2
+size_flags_vertical = 8
+theme_override_fonts/font = ExtResource("2_1swpd")
+text = "VIDA NÚMERO: "
+label_settings = SubResource("LabelSettings_jfglp")
 horizontal_alignment = 1
 
 [node name="Buttons" type="HBoxContainer" parent="Victory/Container"]
@@ -204,6 +253,8 @@ text = "Salir"
 
 [node name="Sound" type="AudioStreamPlayer2D" parent="Victory"]
 stream = ExtResource("4_1po1d")
+max_distance = 4000.0
+attenuation = 1e-05
 
 [connection signal="pressed" from="Pause/Container/Buttons/Restart" to="." method="_on_restart_pressed"]
 [connection signal="pressed" from="Pause/Container/Buttons/Resume" to="." method="_on_resume_pressed"]

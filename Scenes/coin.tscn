@@ -1,13 +1,13 @@
 [gd_scene load_steps=11 format=3 uid="uid://ujhspbjixoxy"]
 
-[ext_resource type="Texture2D" uid="uid://ctemxl3pdddm8" path="res://Assets/Collectibles/moneda10.png" id="1_536rk"]
+[ext_resource type="Texture2D" uid="uid://lbi23w1rx6b1" path="res://Assets/Collectibles/moneda10.png" id="1_536rk"]
 [ext_resource type="Script" path="res://Assets/Scripts/coin.gd" id="1_g1xb4"]
-[ext_resource type="Texture2D" uid="uid://57oahc8admv4" path="res://Assets/Collectibles/moneda12.png" id="2_hjs5m"]
-[ext_resource type="Texture2D" uid="uid://casmmlfg56upo" path="res://Assets/Collectibles/moneda2.png" id="2_tyoih"]
-[ext_resource type="Texture2D" uid="uid://br88ftl11ehyj" path="res://Assets/Collectibles/moneda3.png" id="3_2t5am"]
-[ext_resource type="Texture2D" uid="uid://dg2ilq0oi0khr" path="res://Assets/Collectibles/moneda13.png" id="3_8gv18"]
-[ext_resource type="Texture2D" uid="uid://fcf0i5ydf8eq" path="res://Assets/Collectibles/moneda4.png" id="4_byy8f"]
-[ext_resource type="AudioStream" uid="uid://de13hk7hj8sm8" path="res://Assets/Audio/Coin.wav" id="7_oyx3l"]
+[ext_resource type="Texture2D" uid="uid://64n5vn82pdnw" path="res://Assets/Collectibles/moneda12.png" id="2_hjs5m"]
+[ext_resource type="Texture2D" uid="uid://bo8yd11u0ua3a" path="res://Assets/Collectibles/moneda2.png" id="2_tyoih"]
+[ext_resource type="Texture2D" uid="uid://di577rqo43kdj" path="res://Assets/Collectibles/moneda3.png" id="3_2t5am"]
+[ext_resource type="Texture2D" uid="uid://becm1c02dtwpx" path="res://Assets/Collectibles/moneda13.png" id="3_8gv18"]
+[ext_resource type="Texture2D" uid="uid://brc5y3lsqj2hi" path="res://Assets/Collectibles/moneda4.png" id="4_byy8f"]
+[ext_resource type="AudioStream" uid="uid://k8hxjyxfimvq" path="res://Assets/Audio/Coin.wav" id="7_oyx3l"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_8twdm"]
 animations = [{
